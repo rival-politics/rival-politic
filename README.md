@@ -154,31 +154,6 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="45%">
-
-## 🏹 Разработчики  
-  
-
-<div align="center">
-<img src="https://avatars.githubusercontent.com/u/54406333?v=4" align="center" height="190" width="190"/>
-</div>  
-  
-
-  
-
-
-</td><td valign="top" width="45%">
-
-## <div align="center">🤜</div>  
-  
-
-<img src="https://github-readme-stats.vercel.app/api?username=dezared&show_icons=true&count_private=true&hide_border=true" align="left" style="width: 95%" />
-
-</td></tr></table>  
-
-<br/>  
-
-
 ## Остальное  
 - README.MD Будет обновляться со временем  
 
