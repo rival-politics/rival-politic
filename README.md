@@ -21,25 +21,25 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="33%">
+<table><tr><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/j3dnNHq.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/j3dnNHq.png" align="left" style="width: 90%" />  
   
 
 🔏🔠 Rival Politics Core - основна для всех проектов. На базе библиотек, предоставляемых `rival-politics-core` и создаются основные проекты. В разработке.  
 
 
-</td><td valign="top" width="33%">
+</td><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/AY4v9f2.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/AY4v9f2.png" align="left" style="width: 90%" />  
   
 
 🔏💱 TML Redux - ролевой экономический проект. В основе лежит взаимодействие пользователей, государств и организаций. В разработке.  
 
 
-</td><td valign="top" width="33%">
+</td><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/ux2DNaW.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/ux2DNaW.png" align="left" style="width: 90%" />  
   
 
 🔏🤖 WARCORPS - небольшой проект, по сравнению с остальными по части механик, но в свою очередь совсем не требует администрации. Вся игра автоматизирована. Сессии автоматически запускаются в определённо время, просто сделайте свой ход. В разработке.  
@@ -49,25 +49,25 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="33%">
+<table><tr><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/zVCaz6g.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/zVCaz6g.png" align="left" style="width: 90%" />  
   
 
 🔏🗺️ SENATR - ролевая-политическая игра. В игре имеются небольшое количество государств. Станьте частью этих государств, пройдите путь от небольшого клерка до правителя страны. В разработке.  
 
 
-</td><td valign="top" width="33%">
+</td><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/7QKh7fe.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/7QKh7fe.png" align="left" style="width: 90%" />  
   
 
 🔏🔭 Colonia Despot - ролевой-космический проект. Создайте свое государство в необъятном космосе, создайте свою историю исследователя космоса, и завоюйте стратегически важные объекты. В разработке.  
 
 
-</td><td valign="top" width="33%">
+</td><td valign="top" width="32%">
 
-<img src="https://i.imgur.com/X3EKQuo.png" align="left" style="width: 100%" />  
+<img src="https://i.imgur.com/X3EKQuo.png" align="left" style="width: 90%" />  
   
 
 🔏🕰️ EPOCH - создайте свою нацию и пройдите путь от каменного века до космических полётов. Создайте свою историю, длинною в тысячи лет. В разработке.  
@@ -106,7 +106,7 @@ If things goes well, this section should automatically be replaced by a list of 
 
 <br/>  
 
-<table><tr><td valign="top" width="50%">
+<table><tr><td valign="top" width="45%">
 
 ## 🧰 Технологии  
   
@@ -139,7 +139,7 @@ If things goes well, this section should automatically be replaced by a list of 
 <a href="https://www.jenkins.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jenkins-icon.svg" alt="Jenkins" height="50" /></a>  
 </div>
 
-</td><td valign="top" width="50%">
+</td><td valign="top" width="45%">
 
 ## <div align="center">и немного о нас...</div>  
   
@@ -147,32 +147,32 @@ If things goes well, this section should automatically be replaced by a list of 
 Мы используем передовые технологии, создаем качественно спроектированный код, оптимизируем его и следуем принципам DRY, SOLID. В основе Back-End части лежит принцип DDD. На front-end ATOMIC Design. Создаем большую инфраструктуру CI/CD с Docker интеграцией. Мы будем рады любым вкладам в проекты.  
   
 
-<img src="https://rishavanand.github.io/static/images/greetings.gif" align="left" style="width: 100%" />  
+<img src="https://rishavanand.github.io/static/images/greetings.gif" align="left" style="width: 95%" />  
 
 
 </td></tr></table>  
 
 <br/>  
 
-<table><tr><td valign="top" width="50%">
+<table><tr><td valign="top" width="45%">
 
 ## 🏹 Разработчики  
   
 
 <div align="center">
-<img src="https://avatars.githubusercontent.com/u/54406333?v=4" align="center" height="190" width="190" />
+<img src="https://avatars.githubusercontent.com/u/54406333?v=4" align="center" height="190" width="190"/>
 </div>  
   
 
   
 
 
-</td><td valign="top" width="50%">
+</td><td valign="top" width="45%">
 
 ## <div align="center">🤜</div>  
   
 
-<img src="https://github-readme-stats.vercel.app/api?username=dezared&show_icons=true&count_private=true&hide_border=true" align="left" />
+<img src="https://github-readme-stats.vercel.app/api?username=dezared&show_icons=true&count_private=true&hide_border=true" align="left" style="width: 95%" />
 
 </td></tr></table>  
 
@@ -183,6 +183,3 @@ If things goes well, this section should automatically be replaced by a list of 
 - README.MD Будет обновляться со временем  
 
 <br />
-
-----
-<div align="center">Generated using <a href="https://profilinator.rishav.dev/" target="_blank">Github Profilinator</a></div>
