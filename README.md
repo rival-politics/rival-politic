@@ -100,8 +100,8 @@ Rival Politics прежде всего придерживается мульти
 ## 📕 Блог  
   
 
-<!-- BLOG-POST-LIST:START -->  
-If things goes well, this section should automatically be replaced by a list of your blog posts after you commit your readme file. 
+<!-- BLOG-POST-LIST:START -->
+- [123](https://dev.to/rival-politics/123-41a8)
 <!-- BLOG-POST-LIST:END -->  
 
 <br/>  
