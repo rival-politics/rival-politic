@@ -1,3 +1,9 @@
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+
 # **🌍 RIVAL POLITICS**  
   
 
@@ -21,7 +27,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="32%" style="border: 1px solid white!important">
+<table><tr><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/j3dnNHq.png" align="left" style="width: 90%" />  
   
@@ -29,7 +35,7 @@ Rival Politics прежде всего придерживается мульти
 🔏🔠 Rival Politics Core - основна для всех проектов. На базе библиотек, предоставляемых `rival-politics-core` и создаются основные проекты. В разработке.  
 
 
-</td><td valign="top" width="32%" style="border: 1px solid white!important">
+</td><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/AY4v9f2.png" align="left" style="width: 90%" />  
   
@@ -37,7 +43,7 @@ Rival Politics прежде всего придерживается мульти
 🔏💱 TML Redux - ролевой экономический проект. В основе лежит взаимодействие пользователей, государств и организаций. В разработке.  
 
 
-</td><td valign="top" width="32%" style="border: 1px solid white!important">
+</td><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/ux2DNaW.png" align="left" style="width: 90%" />  
   
@@ -49,7 +55,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table style="border: 1px solid white"><tr><td valign="top" width="32%" style="border: 1px solid white!important">
+<table><tr><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/zVCaz6g.png" align="left" style="width: 90%" />  
   
@@ -57,7 +63,7 @@ Rival Politics прежде всего придерживается мульти
 🔏🗺️ SENATR - ролевая-политическая игра. В игре имеются небольшое количество государств. Станьте частью этих государств, пройдите путь от небольшого клерка до правителя страны. В разработке.  
 
 
-</td><td valign="top" width="32%" style="border: 1px solid white!important">
+</td><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/7QKh7fe.png" align="left" style="width: 90%" />  
   
@@ -65,7 +71,7 @@ Rival Politics прежде всего придерживается мульти
 🔏🔭 Colonia Despot - ролевой-космический проект. Создайте свое государство в необъятном космосе, создайте свою историю исследователя космоса, и завоюйте стратегически важные объекты. В разработке.  
 
 
-</td><td valign="top" width="32%" style="border: 1px solid white!important">
+</td><td valign="top" width="32%" >
 
 <img src="https://i.imgur.com/X3EKQuo.png" align="left" style="width: 90%" />  
   
@@ -77,7 +83,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table style="border: 1px solid white"><tr><td valign="top" width="33%" style="border: 1px solid white!important">
+<table><tr><td valign="top" width="33%" >
 
 <img src="https://i.imgur.com/FHpzFC8.png" align="left" style="width: 100%" />  
   
@@ -85,11 +91,11 @@ Rival Politics прежде всего придерживается мульти
 🔏🔮 Emerald Dust - Исследуйте невероятный, новый, таинственный мир... В разработке.  
 
 
-</td><td valign="top" width="33%" style="border: 1px solid white!important">
+</td><td valign="top" width="33%" >
 
 
 
-</td><td valign="top" width="33%" style="border: 1px solid white!important">
+</td><td valign="top" width="33%" >
 
 
 
@@ -106,7 +112,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="45%" style="border: 1px solid white!important">
+<table><tr><td valign="top" width="45%" >
 
 ## 🧰 Технологии  
   
