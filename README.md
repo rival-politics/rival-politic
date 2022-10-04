@@ -1,9 +1,3 @@
-<style>
-td, th {
-   border: none!important;
-}
-</style>
-
 # **🌍 RIVAL POLITICS**  
   
 
