@@ -49,7 +49,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="32%">
+<table style="border: 1px solid white"><tr><td valign="top" width="32%">
 
 <img src="https://i.imgur.com/zVCaz6g.png" align="left" style="width: 90%" />  
   
@@ -77,7 +77,7 @@ Rival Politics прежде всего придерживается мульти
 
 <br/>  
 
-<table><tr><td valign="top" width="33%">
+<table style="border: 1px solid white"><tr><td valign="top" width="33%">
 
 <img src="https://i.imgur.com/FHpzFC8.png" align="left" style="width: 100%" />  
   
