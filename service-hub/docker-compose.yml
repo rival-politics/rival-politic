@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  rival-politics-core-proxy:
+    image: umputun/nginx-le:latest
+    container_name: rival-politics-core-proxy
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    volumes:
+      - /var/lib/docker/volumes/rival-politics-core/_data/etc/ssl:/ssl
+      - ./hub.conf:/etc/nginx/service.conf
+      - ./tml-classic/proxy-settings.conf:/etc/nginx/tml-classic/proxy-settings.conf
+    environment:
+      - TZ=GMT
+      - LETSENCRYPT=true
+      - LE_EMAIL=dezare3232@gmail.com
+      - LE_FQDN=tml-classic.rivalpolitics.ru,rivalpolitics.ru
+
+volumes:
+  rival-politics-core:
+    external: true
