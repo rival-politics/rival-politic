@@ -29,6 +29,9 @@ jobs:
             cd home
             mkdir -p service-hub
             cd service-hub
+            cd service-hub
+            docker-compose down
+            cd /home/service-hub
             git clone https://github.com/rival-politics/rival-politic
             cp -R ./rival-politic/* .
             rm -R rival-politic
