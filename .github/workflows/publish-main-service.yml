@@ -25,15 +25,15 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            cd ..
-            cd home
-            mkdir -p service-hub
-            cd service-hub
-            cd service-hub
-            docker-compose down
-            cd /home/service-hub
-            git clone https://github.com/rival-politics/rival-politic
-            cp -R ./rival-politic/* .
-            rm -R rival-politic
-            cd service-hub
-            docker-compose up --force-recreate --build --no-deps -d
+
+# зайти в папку
+# Если существует уже запущенный контейнер:
+## остановить контейнер
+## запушить обновления в buffer папке
+## перезаписать данные из buffer в main папку
+## запустить docker-compose в main папке
+# иначе
+## создать buffer папку
+## склонировать туда репозиторий
+## склонировать данные из buffer в main
+## запустить контейнер в main

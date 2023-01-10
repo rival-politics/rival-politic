@@ -10,7 +10,7 @@ services:
     restart: always
     volumes:
       - /var/lib/docker/volumes/rival-politics-core/_data/etc/ssl:/ssl
-      - hub.conf:/etc/nginx/service.conf
+      - ./hub.conf:/etc/nginx/service.conf
       - ./tml-classic/proxy-settings.conf:/etc/nginx/tml-classic/proxy-settings.conf
     environment:
       - TZ=GMT
