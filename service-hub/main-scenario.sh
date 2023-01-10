@@ -18,14 +18,11 @@ then
 
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
   mkdir -p $ST$WORKDIR
-  mkdir -p $ST$WORKDIR/rival-politic
-  echo "[rival-politics-core] [debug] Additional files have been created"
-  git clone https://github.com/rival-politics/rival-politic $ST$WORKDIR/rival-politic/
-  echo "[rival-politics-core] [debug] Repository has been clonned success"
   mkdir -p $ST$WORKDIR/buffer-service-hub
-  cp -rf $ST$WORKDIR/rival-politic/service-hub/* $ST$WORKDIR/buffer-service-hub/
+  echo "[rival-politics-core] [debug] Additional files have been created"
+  git clone https://github.com/rival-politics/rival-politic $ST$WORKDIR/buffer-service-hub/
+  echo "[rival-politics-core] [debug] Repository has been clonned success"
   echo "[rival-politics-core] [debug] Create buffer folder..."
-  rm -rf $ST$WORKDIR/rival-politic
   mkdir -p $ST$WORKDIR/service-hub
   cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub/
   echo "[rival-politics-core] [debug] Starting a docker-compose..."
