@@ -13,7 +13,7 @@ then
   rm -rf ../home/service-expluatator/rival-politic
   mkdir -p ../home/service-expluatator/service-hub
   yes | cp -rf ../home/service-expluatator/buffer-service-hub/* ../home/service-expluatator/service-hub
-  docker-compose up -d -f ../home/service-expluatator/service-hub/docker-compose.yml
+  docker-compose up -d --force-recreate -f ../home/service-expluatator/service-hub/docker-compose.yml
 else
   echo "[rival-politics-core] [debug] Container ${CONTAINER_NAME} exist"
   docker stop $CONTAINER_NAME
