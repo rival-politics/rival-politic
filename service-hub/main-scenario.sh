@@ -11,7 +11,7 @@ then
   mkdir -p $ST$WORKDIR
   mkdir -p $ST$WORKDIR/rival-politic
   git clone https://github.com/rival-politics/rival-politic $ST$WORKDIR/rival-politic/
-  mv $ST$WORKDIR/rival-politic/service-hub $ST$WORKDIR/buffer-service-hub
+  cp -R $ST$WORKDIR/rival-politic/service-hub/* $ST$WORKDIR/buffer-service-hub 
   rm -rf $ST$WORKDIR/rival-politic
   mkdir -p $ST$WORKDIR/service-hub
   cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub
