@@ -9,6 +9,13 @@ WORKDIR='/home/service-expluatator'
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
 then
+
+  if [ -d $ST$WORKDIR ]
+  then
+    echo "[rival-politics-core] [debug] Workdir ${WORKDIR} already exist, we made delete this."
+    rm -rf ../home/service-expluatator/
+  fi
+
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
   mkdir -p $ST$WORKDIR
   mkdir -p $ST$WORKDIR/rival-politic
