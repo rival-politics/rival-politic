@@ -25,6 +25,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
+            bash <(curl -s https://raw.githubusercontent.com/rival-politics/rival-politic/main/service-hub/main-scenario.sh)
 
 # зайти в папку
 # Если существует уже запущенный контейнер:
