@@ -31,7 +31,7 @@ then
 else
   echo "[rival-politics-core] [debug] Container ${CONTAINER_NAME} exist"
   docker stop $CONTAINER_NAME
-  git -c $ST$WORKDIR/buffer-service-hub/ pull origin main
+  git -C $ST$WORKDIR/buffer-service-hub pull origin main
   echo "[rival-politics-core] [debug] Pull buffer repository has been completed"
   cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub/
   echo "[rival-politics-core] [debug] Copy to work directory has been completed"
