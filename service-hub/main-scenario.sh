@@ -6,11 +6,11 @@ CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
 then
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
-  mkdir ../home/service-expluatator
+  mkdir -p ../home/service-expluatator
   git clone https://github.com/rival-politics/rival-politic ../home/service-expluatator
-  mv ../home/service-expluatator/rival-politic/buffer-service-hub ../home/service-expluatator/buffer-service-hub
+  mv ../home/service-expluatator/rival-politic/service-hub ../home/service-expluatator/buffer-service-hub
   rm -rf ../home/service-expluatator/rival-politic
-  mkdir ../home/service-expluatator/service-hub
+  mkdir -p ../home/service-expluatator/service-hub
   yes | cp -rf ../home/service-expluatator/buffer-service-hub/* ../home/service-expluatator/service-hub
   docker-compose up -d -f ../home/service-expluatator/service-hub/docker-compose.yml
 else
