@@ -7,7 +7,7 @@ if [ ! "${CID}" ];
 then
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
   mkdir ../home/service-expluatator
-  git clone https://github.com/rival-politics/rival-politic:whatever ../home/service-expluatator
+  git clone https://github.com/rival-politics/rival-politic/:whatever ../home/service-expluatator
   mv ../home/service-expluatator/rival-politic/buffer-service-hub ../home/service-expluatator/buffer-service-hub
   rm -rf ../home/service-expluatator/rival-politic
   mkdir ../home/service-expluatator/service-hub
