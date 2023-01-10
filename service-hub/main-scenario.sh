@@ -26,7 +26,7 @@ then
   mkdir -p $ST$WORKDIR/service-hub
   cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub/
   echo "[rival-politics-core] [debug] Starting a docker-compose..."
-  docker-compose -f $WORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/service-hub/service-hub/docker-compose.yml up -d --force-recreate
   echo "[rival-politics-core] [debug] Job has been completed"
 else
   echo "[rival-politics-core] [debug] Container ${CONTAINER_NAME} exist"
@@ -36,6 +36,6 @@ else
   cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub/
   echo "[rival-politics-core] [debug] Copy to work directory has been completed"
   echo "[rival-politics-core] [debug] Starting a docker-compose..."
-  docker-compose -f $WORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/service-hub/service-hub/docker-compose.yml up -d --force-recreate
   echo "[rival-politics-core] [debug] Job has been completed"
 fi
