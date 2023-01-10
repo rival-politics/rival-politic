@@ -1,19 +1,21 @@
 #!/usr/bin/bash
 
 CONTAINER_NAME='rival-politics-core-proxy'
+ST='..'
+WORKDIR='/home/service-expluatator'
 
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
 then
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
-  mkdir -p ../home/service-expluatator
-  mkdir -p ../home/service-expluatator/rival-politic
-  git clone https://github.com/rival-politics/rival-politic ../home/service-expluatator/rival-politic/
-  mv ../home/service-expluatator/rival-politic/service-hub ../home/service-expluatator/buffer-service-hub
-  rm -rf ../home/service-expluatator/rival-politic
-  mkdir -p ../home/service-expluatator/service-hub
-  yes | cp -rf ../home/service-expluatator/buffer-service-hub/* ../home/service-expluatator/service-hub
-  docker-compose -f /home/service-expluatator/service-hub/docker-compose.yml up -d --force-recreate
+  mkdir -p $ST$WORKDIR
+  mkdir -p $ST$WORKDIR/rival-politic
+  git clone https://github.com/rival-politics/rival-politic $ST$WORKDIR/rival-politic/
+  mv $ST$WORKDIR/rival-politic/service-hub $ST$WORKDIR/buffer-service-hub
+  rm -rf $ST$WORKDIR/rival-politic
+  mkdir -p $ST$WORKDIR/service-hub
+  cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub
+  docker-compose -f $WORKDIR/service-hub/docker-compose.yml up -d --force-recreate
 else
   echo "[rival-politics-core] [debug] Container ${CONTAINER_NAME} exist"
   docker stop $CONTAINER_NAME
