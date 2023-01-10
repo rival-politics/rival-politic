@@ -2,14 +2,16 @@
 
 CONTAINER_NAME='rival-politics-core-proxy'
 
-cd ../home
-
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
 then
   echo "[rival-politics-core] [debug] Container doen't ${CONTAINER_NAME} exist"
+  cd ../home
+  ls
   mkdir service-expluatator
+  ls
   cd service-expluatator
+  ls
   git clone https://github.com/rival-politics/rival-politic
   mv rival-politic/buffer-service-hub buffer-service-hub
   rm -rf rival-politic
