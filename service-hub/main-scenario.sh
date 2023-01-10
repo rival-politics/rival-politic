@@ -34,11 +34,11 @@ then
 else
   echo "[rival-politics-core] [debug] Container ${CONTAINER_NAME} exist"
   docker stop $CONTAINER_NAME
-  cd service-expluatator
-  cd buffer-service-hub
-  git pull origin main
-  cd ..
-  yes | cp -rf buffer-service-hub/* service-hub
-  cd service-hub
-  docker-compose up -d
+  git -c $ST$WORKDIR/buffer-service-hub/ pull origin main
+  echo "[rival-politics-core] [debug] Pull buffer repository has been completed"
+  cp -rf $ST$WORKDIR/buffer-service-hub/* $ST$WORKDIR/service-hub/
+  echo "[rival-politics-core] [debug] Copy to work directory has been completed"
+  echo "[rival-politics-core] [debug] Starting a docker-compose..."
+  docker-compose -f $WORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  echo "[rival-politics-core] [debug] Job has been completed"
 fi
