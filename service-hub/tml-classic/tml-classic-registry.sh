@@ -39,7 +39,7 @@ then
 else
   echo "[${CONTAINER_NAME}] [debug] Container ${CONTAINER_NAME} exist"
   docker stop $CONTAINER_NAME
-  git -C $ST$WORKDIR/buffer-$NAMEWORKDIR pull origin main
+  git -C $ST$WORKDIR/buffer-$NAMEWORKDIR pull origin prod
   echo "[${CONTAINER_NAME}] [debug] Pull buffer repository has been completed"
   rsync -av $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Copy to work directory has been completed"
