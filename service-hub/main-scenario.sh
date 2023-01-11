@@ -17,11 +17,11 @@ then
   
   if [[ -d "${ST}${WORKDIR}" ]]
   then
-    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete ${ST}${WORKDIR}/${NAMEWORKDIR}/ and ${ST}${WORKDIR}/bufffer-${NAMEWORKDIR}/."
+    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete this subfolder project"
     rm -rf $WORKDIR/$NAMEWORKDIR
     rm -rf $WORKDIR/buffer-$NAMEWORKDIR
   fi
-
+  
   echo "[${CONTAINER_NAME}] [debug] Container doen't ${CONTAINER_NAME} exist"
   mkdir -p $ST$WORKDIR
   mkdir -p $ST$WORKDIR/buffer-$NAMEWORKDIR
