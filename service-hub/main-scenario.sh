@@ -31,11 +31,11 @@ then
   mkdir -p $ST$WORKDIR/$NAMEWORKDIR
   cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  if [ -z $(docker network ls --filter name=^${NETWORK_NAME}$ --format="{{ .Name }}") ] ; then 
-    echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
-  else 
+  if [[ "$(docker network ls | grep "${networkName}")" == "" ]] ; then
     echo "[${CONTAINER_NAME}] [debug] #1 Create global docker network"
     docker network create $NETWORK_NAME 
+  else 
+    echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
   fi
   docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
