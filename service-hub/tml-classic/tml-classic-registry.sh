@@ -2,7 +2,7 @@
 
 set -e
 
-CONTAINER_NAME='rival-politics-tml-classic'
+CONTAINER_NAME='tml-classic-api'
 ST='..'
 WORKDIR='/home/service-expluatator'
 NAMEWORKDIR='tml-classic'
