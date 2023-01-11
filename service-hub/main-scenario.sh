@@ -8,6 +8,8 @@ WORKDIR='/home/service-expluatator'
 NAMEWORKDIR='service-hub'
 GITHUB_REPO='https://github.com/rival-politics/rival-politic'
 
+NETWORK_NAME='rival-politics-core-network'
+
 
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
@@ -29,8 +31,10 @@ then
   mkdir -p $ST$WORKDIR/$NAMEWORKDIR
   cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  echo "[${CONTAINER_NAME}] [debug] #1 Create global docker network"
-  docker network create rival-politics-core-network
+  if [ -z $(docker network ls --filter name=^${NETWORK_NAME}$ --format="{{ .Name }}") ] ; then 
+    echo "[${CONTAINER_NAME}] [debug] #1 Create global docker network"
+    docker network create $NETWORK_NAME 
+  fi
   docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 else
