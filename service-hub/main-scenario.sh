@@ -32,6 +32,8 @@ then
   cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
   if [ -z $(docker network ls --filter name=^${NETWORK_NAME}$ --format="{{ .Name }}") ] ; then 
+    echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
+  else 
     echo "[${CONTAINER_NAME}] [debug] #1 Create global docker network"
     docker network create $NETWORK_NAME 
   fi
