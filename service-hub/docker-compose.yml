@@ -17,6 +17,8 @@ services:
       - LETSENCRYPT=true
       - LE_EMAIL=dezare3232@gmail.com
       - LE_FQDN=tml-classic.rivalpolitics.ru,rivalpolitics.ru
+    networks:
+      - rival-politics-core-network
 
 volumes:
   rival-politics-core:

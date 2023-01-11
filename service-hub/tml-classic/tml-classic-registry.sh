@@ -22,7 +22,6 @@ then
     rm -rf $WORKDIR/buffer-$NAMEWORKDIR
   fi
 
-
   echo "[${CONTAINER_NAME}] [debug] Container doen't ${CONTAINER_NAME} exist"
   mkdir -p $ST$WORKDIR
   mkdir -p $ST$WORKDIR/buffer-$NAMEWORKDIR
