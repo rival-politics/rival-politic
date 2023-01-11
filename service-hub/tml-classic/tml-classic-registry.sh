@@ -16,6 +16,7 @@ then
   then
     echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete this."
     rm -rf $ST$WORKDIR/$NAMEWORKDIR/
+    rm -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/
   fi
 
   echo "[${CONTAINER_NAME}] [debug] Container doen't ${CONTAINER_NAME} exist"
