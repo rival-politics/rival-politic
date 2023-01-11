@@ -26,7 +26,7 @@ then
   echo "[${CONTAINER_NAME}] [debug] Repository has been clonned success"
   echo "[${CONTAINER_NAME}] [debug] Create buffer folder..."
   mkdir -p $ST$WORKDIR/$NAMEWORKDIR
-  cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
+  rsync $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
   docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
@@ -35,9 +35,11 @@ else
   docker stop $CONTAINER_NAME
   git -C $ST$WORKDIR/buffer-$NAMEWORKDIR pull origin main
   echo "[${CONTAINER_NAME}] [debug] Pull buffer repository has been completed"
-  cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
+  rsync $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Copy to work directory has been completed"
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
   docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 fi
+
+# add: docker volume create --name=tml-classic-volume

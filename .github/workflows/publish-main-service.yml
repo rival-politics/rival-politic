@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  publis-service-resolver:
+  publish-service-resolver:
     runs-on: ubuntu-latest
     
     steps:
