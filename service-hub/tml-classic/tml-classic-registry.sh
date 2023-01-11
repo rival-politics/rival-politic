@@ -17,7 +17,7 @@ then
   
   if [[ -d "${ST}${WORKDIR}" ]]
   then
-    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete ${ST}$PWORKDIR}}/${$NAMEWORKDIR}/ and ${ST}${WORKDIR}/bufffer-${NAMEWORKDIR}/."
+    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete ${ST}${PWORKDIR}/${NAMEWORKDIR}/ and ${ST}${WORKDIR}/bufffer-${NAMEWORKDIR}/."
     rm -rf $WORKDIR/$NAMEWORKDIR
     rm -rf $WORKDIR/buffer-$NAMEWORKDIR
   fi
@@ -32,7 +32,7 @@ then
   mkdir -p $ST$WORKDIR/$NAMEWORKDIR
   rsync -av $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  
+
   docker volume create --name=$NAMEWORKDIR-volume
   docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
