@@ -14,9 +14,9 @@ then
   
   if [[ -d "${ST}${WORKDIR}" ]]
   then
-    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete this."
-    rm -rf $ST$WORKDIR/$NAMEWORKDIR/
-    rm -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/
+    echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete ${ST}$PWORKDIR}}/${$NAMEWORKDIR}/ and ${ST}${WORKDIR}/bufffer-${NAMEWORKDIR}/."
+    rm -rf $WORKDIR/$NAMEWORKDIR
+    rm -rf $WORKDIR/buffer-$NAMEWORKDIR
   fi
 
   echo "[${CONTAINER_NAME}] [debug] Container doen't ${CONTAINER_NAME} exist"
