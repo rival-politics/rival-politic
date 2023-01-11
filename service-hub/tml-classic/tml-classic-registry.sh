@@ -2,17 +2,16 @@
 
 set -e
 
-CONTAINER_NAME='rival-politics-core-proxy'
+CONTAINER_NAME='rival-politics-tml-classic'
 ST='..'
 WORKDIR='/home/service-expluatator'
-NAMEWORKDIR='service-hub'
-GITHUB_REPO='https://github.com/rival-politics/rival-politic'
-
+NAMEWORKDIR='tml-classic'
+GITHUB_REPO='https://github.com/dezared/tml-classic'
 
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
 then
-
+  
   if [[ -d "${ST}${WORKDIR}" ]]
   then
     echo "[${CONTAINER_NAME}] [debug] Workdir ${WORKDIR} already exist, we made delete this."
@@ -29,7 +28,7 @@ then
   mkdir -p $ST$WORKDIR/$NAMEWORKDIR
   cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 else
   echo "[${CONTAINER_NAME}] [debug] Container ${CONTAINER_NAME} exist"
@@ -39,6 +38,6 @@ else
   cp -rf $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Copy to work directory has been completed"
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 fi

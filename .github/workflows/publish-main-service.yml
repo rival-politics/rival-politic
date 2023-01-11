@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  push_to_docker_hub:
+  publis-service-resolver:
     runs-on: ubuntu-latest
     
     steps:
