@@ -23,7 +23,8 @@ services:
 volumes:
   rival-politics-core:
     external: true
-    
-networks: 
-  rival-politics-core-network:
-    external: true
+
+networks:
+  default:
+    external:
+      name: 'rival-politics-core-network' 
