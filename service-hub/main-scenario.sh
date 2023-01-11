@@ -35,7 +35,7 @@ then
 
   if [[ "$(docker network ls | grep "${NETWORK_NAME}")" == "" ]] ; then
     echo "[${CONTAINER_NAME}] [debug] #1 Create global docker network"
-    docker network create $NETWORK_NAME 
+    docker network create --driver bridge $NETWORK_NAME
   else 
     echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
   fi
