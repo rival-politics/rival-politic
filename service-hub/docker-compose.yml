@@ -20,6 +20,31 @@ services:
     networks:
       - rival-politics-core-network
 
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: rival-politics-portainer
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro                                    # Работаем с локальным временем хоста
+      - /var/run/docker.sock:/var/run/docker.sock:ro                        # Работаем с сокетом докера
+      - /var/lib/docker/volumes/rival-politics-core/_data/portainer-data:/data    # Сохраняем в томе `surfis-volume`
+    ports:
+      - 9000:9000
+  
+  pgadmin:
+    container_name: rival-politics-pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "9001:80"
+    volumes:
+      - /var/lib/docker/volumes/rival-politics-core/_data/pgadmin4/servers.json:/pgadmin4/servers.json
+
 volumes:
   rival-politics-core:
     external: true

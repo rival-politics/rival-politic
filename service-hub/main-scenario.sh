@@ -10,6 +10,8 @@ GITHUB_REPO='https://github.com/rival-politics/rival-politic'
 
 NETWORK_NAME='rival-politics-core-network'
 
+ENVWORKDIT='/home/env/'
+ENVNAME='.env.rival-proxy.prod'
 
 CID=$(docker ps -q -f status=running -f name=^/${CONTAINER_NAME}$)
 if [ ! "${CID}" ]; 
@@ -40,7 +42,7 @@ then
     echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
   fi
 
-  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 else
   echo "[${CONTAINER_NAME}] [debug] Container ${CONTAINER_NAME} exist"
@@ -50,6 +52,6 @@ else
   rsync -av $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Copy to work directory has been completed"
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
-  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml up -d --force-recreate
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 fi
