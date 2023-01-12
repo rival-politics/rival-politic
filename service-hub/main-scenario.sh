@@ -9,6 +9,7 @@ NAMEWORKDIR='service-hub'
 GITHUB_REPO='https://github.com/rival-politics/rival-politic'
 
 NETWORK_NAME='rival-politics-core-network'
+DATABASE_NETWORK_NAME='rival-politics-core-database-network'
 
 ENVWORKDIT='/home/env/'
 ENVNAME='.env.rival-proxy.prod'
@@ -40,6 +41,13 @@ then
     docker network create --driver bridge $NETWORK_NAME
   else 
     echo "[${CONTAINER_NAME}] [debug] #1 Network create skipping..."
+  fi
+
+  if [[ "$(docker network ls | grep "${DATABASE_NETWORK_NAME}")" == "" ]] ; then
+    echo "[${CONTAINER_NAME}] [debug] #2 Create data-base docker network"
+    docker network create --driver bridge $DATABASE_NETWORK_NAME
+  else 
+    echo "[${CONTAINER_NAME}] [debug] #2 DB Network create skipping..."
   fi
 
   docker-compose -f $WORKDIR/$NAMEWORKDIR/service-hub/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
