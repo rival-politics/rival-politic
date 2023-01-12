@@ -6,7 +6,7 @@ CONTAINER_NAME='tml-classic-api'
 ST='..'
 WORKDIR='/home/service-expluatator'
 NAMEWORKDIR='tml-classic'
-GITHUB_REPO='https://github.com/dezared/tml-classic'
+GITHUB_REPO='https://github.com/rival-politics/tml-classic'
 
 ENVWORKDIT='/home/env/'
 ENVNAME='.env.tml-classic.prod'
@@ -34,6 +34,7 @@ then
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
 
   docker volume create --name=$NAMEWORKDIR-volume
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME build
   docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 else
@@ -44,6 +45,7 @@ else
   rsync -av $ST$WORKDIR/buffer-$NAMEWORKDIR/* $ST$WORKDIR/$NAMEWORKDIR/
   echo "[${CONTAINER_NAME}] [debug] Copy to work directory has been completed"
   echo "[${CONTAINER_NAME}] [debug] Starting a docker-compose..."
+  docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME build
   docker-compose -f $WORKDIR/$NAMEWORKDIR/docker-compose.yml --env-file $ENVWORKDIT$ENVNAME up -d --force-recreate
   echo "[${CONTAINER_NAME}] [debug] Job has been completed"
 fi
