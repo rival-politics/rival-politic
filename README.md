@@ -101,7 +101,7 @@ Rival Politics прежде всего придерживается мульти
   
 
 <!-- BLOG-POST-LIST:START -->
-- [123](https://dev.to/rival-politics/123-41a8)
+- [123](https://forem.com/rival-politics/123-41a8)
 <!-- BLOG-POST-LIST:END -->  
 
 <br/>  
